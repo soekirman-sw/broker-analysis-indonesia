@@ -1,0 +1,57 @@
+CONTOH DATA YANG ANDA LIHAT DI STOCKBIT
+=====================================
+
+Untuk saham ENRG tanggal 26 Oktober 2026
+
+=== BROKER SUMMARY - NET VIEW ===
+
+Broker | B.val | B.lot | B.avg | SL.val | S.lot | S.avg | Net
+-------|-------|-------|-------|--------|-------|-------|--------
+MG     | 46.3B | 333.6K| 1.388 | 21.2B  | 145K  | 1.400 | 25.1B
+TP     | 41.3B | 294.4K| 1.401 | 18.5B  | 140K  | 1.402 | 22.8B
+AK     | 39.9B | 283.4K| 1.406 | 15.2B  | 130K  | 1.403 | 24.7B
+XL     | 25.9B | 184.7K| 1.402 | 12.8B  | 95K   | 1.405 | 13.1B
+CC     | 16.9B | 121.3K| 1.395 | 8.5B   | 65K   | 1.401 | 8.4B
+PD     | 9.68B | 68.6K | 1.406 | 4.2B   | 30K   | 1.408 | 5.48B
+
+=== BROKER SUMMARY - GROSS VIEW ===
+
+Broker | B.val | B.lot | B.avg | SL.val | S.lot | S.avg | Gross
+-------|-------|-------|-------|--------|-------|-------|--------
+MG     | 46.3B | 333.6K| 1.388 | 21.2B  | 145K  | 1.400 | 67.5B
+TP     | 41.3B | 294.4K| 1.401 | 18.5B  | 140K  | 1.402 | 59.8B
+AK     | 39.9B | 283.4K| 1.406 | 15.2B  | 130K  | 1.403 | 55.1B
+XL     | 25.9B | 184.7K| 1.402 | 12.8B  | 95K   | 1.405 | 38.7B
+CC     | 16.9B | 121.3K| 1.395 | 8.5B   | 65K   | 1.401 | 25.4B
+PD     | 9.68B | 68.6K | 1.406 | 4.2B   | 30K   | 1.408 | 13.88B
+
+=== CARA COPY KE EXCEL ===
+
+1. Di Stockbit:
+   - Lihat Broker Summary NET atau GROSS
+   - Pilih 6 broker teratas
+   - Seleksi tabel dari "B.val" sampai "Net" (atau "Gross")
+   - Ctrl+C (Copy)
+
+2. Di Excel (sheet DATA_INPUT):
+   - Klik cell C2 (Buy_Val baris pertama)
+   - Ctrl+V (Paste)
+   - Data akan ter-paste otomatis sesuai kolom
+
+3. Isi manual:
+   - Kolom A (Date): 2026-10-26
+   - Kolom B (Broker): MG, TP, AK, XL, CC, PD
+   - Kolom I (Net_Val): Otomatis formula
+
+4. Lihat hasil di sheet HASIL_ANALISIS
+
+=== FORMAT YANG DIHARAPKAN DI EXCEL ===
+
+Date       | Broker | Buy_Val | Buy_Lot | Buy_Avg | Sell_Val | Sell_Lot | Sell_Avg | Net_Val
+-----------|--------|---------|---------|---------|----------|----------|----------|----------
+2026-10-26 | MG     | 46.3B   | 333.6K  | 1.388   | 21.2B    | 145K     | 1.400    | 25.1B (auto)
+2026-10-26 | TP     | 41.3B   | 294.4K  | 1.401   | 18.5B    | 140K     | 1.402    | 22.8B (auto)
+2026-10-26 | AK     | 39.9B   | 283.4K  | 1.406   | 15.2B    | 130K     | 1.403    | 24.7B (auto)
+2026-10-26 | XL     | 25.9B   | 184.7K  | 1.402   | 12.8B    | 95K      | 1.405    | 13.1B (auto)
+2026-10-26 | CC     | 16.9B   | 121.3K  | 1.395   | 8.5B     | 65K      | 1.401    | 8.4B (auto)
+2026-10-26 | PD     | 9.68B   | 68.6K   | 1.406   | 4.2B     | 30K      | 1.408    | 5.48B (auto)
